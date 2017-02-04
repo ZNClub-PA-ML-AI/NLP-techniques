@@ -44,9 +44,10 @@ text={
 tokens = nltk.word_tokenize(text['title'])
 #print(tokens)
 
-unigram = tokens
+unigram = ngrams(tokens,1)
 
-print(unigram)
+#print(unigram)
+print(type(tokens),type(unigram))
 
 
 #bigrams = ngrams(tokens,2)
