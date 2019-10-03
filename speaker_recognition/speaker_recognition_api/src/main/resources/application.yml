@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: speaker-recognition-api
+server:
+  port: 9000
+api:
+  azure:
+    create-profile: https://westus.api.cognitive.microsoft.com/spid/v1.0/identificationProfiles
+    create-enrollment: https://westus.api.cognitive.microsoft.com/spid/v1.0/identificationProfiles/%s/enroll?shortAudio=%s
+    operation-status: https://westus.api.cognitive.microsoft.com/spid/v1.0/operations/%s
+    identification: https://westus.api.cognitive.microsoft.com/spid/v1.0/identify?identificationProfileIds=%s&shortAudio=%s
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: DEBUG
+    com:
+      znclub:
+        speaker_recognition_api:
+          api: DEBUG
+---
+
+spring:
+  profiles: mock
+  application:
+    name: mock-azure-services
+server:
+  port: 9001
+api:
+  azure:
+    create-profile: http://localhost:9001/mock/azure/identificationProfiles
+#    create-profile: https://westus.api.cognitive.microsoft.com/spid/v1.0/identificationProfiles
+    create-enrollment: https://westus.api.cognitive.microsoft.com/spid/v1.0/identificationProfiles/%s/enroll?shortAudio=%s
+    operation-status: http://localhost:9001/mock/azure/operations/%s
+    identification: https://westus.api.cognitive.microsoft.com/spid/v1.0/identify?identificationProfileIds=%s&shortAudio=%s
+#    identification: http://localhost:9001/mock/azure/identify?identificationProfileIds=%s&shortAudio=%s

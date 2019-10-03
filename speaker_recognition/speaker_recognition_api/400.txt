@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "BadRequest",
+    "message": "Invalid Audio Format: Not a WAVE file - no RIFF header"
+  }
+}

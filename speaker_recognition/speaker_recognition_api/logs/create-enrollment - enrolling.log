@@ -1,0 +1,55 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2019-06-17 23:06:26.653  INFO 19151 --- [           main] c.z.s.SpeakerRecognitionApiApplication   : Starting SpeakerRecognitionApiApplication on znevzz-Vostro-3478 with PID 19151 (/home/znevzz/Desktop/Projects/Others/speechtotext-using-azure-api/speaker_recognition/module/speaker_recognition_api/target/classes started by znevzz in /home/znevzz/Desktop/Projects/Others/speechtotext-using-azure-api/speaker_recognition/module/speaker_recognition_api)
+2019-06-17 23:06:26.656  INFO 19151 --- [           main] c.z.s.SpeakerRecognitionApiApplication   : The following profiles are active: default,mock
+2019-06-17 23:06:28.428  INFO 19151 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2019-06-17 23:06:28.466  INFO 19151 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-17 23:06:28.467  INFO 19151 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-06-17 23:06:28.563  INFO 19151 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-17 23:06:28.563 DEBUG 19151 --- [           main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-06-17 23:06:28.563  INFO 19151 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1841 ms
+2019-06-17 23:06:29.084 DEBUG 19151 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-06-17 23:06:29.208  INFO 19151 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-17 23:06:29.223 DEBUG 19151 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-06-17 23:06:29.301 DEBUG 19151 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2019-06-17 23:06:29.317 DEBUG 19151 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-06-17 23:06:29.332 DEBUG 19151 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-06-17 23:06:29.569  INFO 19151 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-06-17 23:06:29.639  INFO 19151 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2019-06-17 23:06:29.644  INFO 19151 --- [           main] c.z.s.SpeakerRecognitionApiApplication   : Started SpeakerRecognitionApiApplication in 3.716 seconds (JVM running for 4.274)
+2019-06-17 23:06:34.193  INFO 19151 --- [nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-17 23:06:34.193  INFO 19151 --- [nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-17 23:06:34.193 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-06-17 23:06:34.203 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-06-17 23:06:34.203  INFO 19151 --- [nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-06-17 23:06:34.225 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/speaker-recognition/v1/supervised/azure//add-speaker/filesystem/", parameters={}
+2019-06-17 23:06:34.237 DEBUG 19151 --- [nio-9001-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.znclub.speaker_recognition_api.model.RecognitionStatus com.znclub.speaker_recognition_api.controller.HttpRequestController.addSpeaker(com.znclub.speaker_recognition_api.model.RecognitionRequest) throws java.lang.InterruptedException
+2019-06-17 23:06:34.349 DEBUG 19151 --- [nio-9001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RecognitionRequest(speakerAttribute=SpeakerAttribute(speakerProfile=SpeakerProfile(profileId=null),  (truncated)...]
+2019-06-17 23:06:36.773 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : HTTP POST http://localhost:9001/mock/azure/identificationProfiles
+2019-06-17 23:06:36.778 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2019-06-17 23:06:36.788 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Writing [{locale=en-us}] as "application/json"
+2019-06-17 23:06:36.808 DEBUG 19151 --- [nio-9001-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/mock/azure/identificationProfiles", parameters={}
+2019-06-17 23:06:36.809 DEBUG 19151 --- [nio-9001-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.util.Map<java.lang.String, java.lang.String> com.znclub.speaker_recognition_api.controller.MockAzureController.createProfile(java.util.Map<java.lang.String, java.lang.String>)
+2019-06-17 23:06:36.814 DEBUG 19151 --- [nio-9001-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{locale=en-us}]
+2019-06-17 23:06:36.823 DEBUG 19151 --- [nio-9001-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-06-17 23:06:36.824 DEBUG 19151 --- [nio-9001-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [{identificationProfileId=396e15db-c58a-4c32-95b3-d74e51ed94b9}]
+2019-06-17 23:06:36.832 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2019-06-17 23:06:36.832 DEBUG 19151 --- [nio-9001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-06-17 23:06:36.833 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Reading to [java.util.Map<?, ?>]
+2019-06-17 23:06:37.465 DEBUG 19151 --- [nio-9001-exec-1] c.z.s.api.AzureApi                       : AZUREAPI: identificationProfileId=396e15db-c58a-4c32-95b3-d74e51ed94b9
+2019-06-17 23:07:03.788 DEBUG 19151 --- [nio-9001-exec-1] c.z.s.api.AzureApi                       : AZUREAPI: url=https://westus.api.cognitive.microsoft.com/spid/v1.0/operations/e721b88d-b2a4-43dc-b87d-647e11ca3f36
+2019-06-17 23:07:20.748 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : HTTP GET https://westus.api.cognitive.microsoft.com/spid/v1.0/operations/e721b88d-b2a4-43dc-b87d-647e11ca3f36
+2019-06-17 23:07:20.752 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2019-06-17 23:07:20.758 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Writing [{}] as "application/json"
+2019-06-17 23:07:22.901 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2019-06-17 23:07:22.905 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.client.RestTemplate              : Reading to [java.util.Map<?, ?>]
+2019-06-17 23:08:48.328 DEBUG 19151 --- [nio-9001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-06-17 23:08:48.329 DEBUG 19151 --- [nio-9001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [RecognitionStatus(statusMessage=Speaker has been added with following )]
+2019-06-17 23:08:48.335 DEBUG 19151 --- [nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
